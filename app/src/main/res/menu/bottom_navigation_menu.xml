@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item
+      android:id="@+id/nav_parks"
+      android:icon="@drawable/ic_baseline_park_24"
+      android:title="Parks" />
+
+  <item
+      android:id="@+id/nav_campgrounds"
+      android:icon="@drawable/ic_baseline_campground_24"
+      android:title="Campgrounds" />
+</menu>
