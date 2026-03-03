@@ -16,8 +16,8 @@ class DetailActivity : AppCompatActivity() {
         val detailDescriptionTextView: TextView = findViewById(R.id.detailDescription)
 
         // Retrieve data passed via Intent
-        val park = intent.getSerializableExtra(PARK_EXTRA, Park::class.java)
-        val campground = intent.getSerializableExtra(CAMPGROUND_EXTRA, Campground::class.java)
+        val park = intent.getSerializableExtra(PARK_EXTRA) as? Park
+        val campground = intent.getSerializableExtra(CAMPGROUND_EXTRA) as? Campground
 
         // Populate UI based on type
         when {
