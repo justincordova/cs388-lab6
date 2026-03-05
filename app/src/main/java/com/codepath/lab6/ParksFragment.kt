@@ -57,6 +57,8 @@ class ParksFragment : Fragment() {
 
     private fun fetchParks() {
         val client = AsyncHttpClient()
+        Log.d(TAG, "Fetching parks from: $PARKS_URL")
+        Log.d(TAG, "API Key: $API_KEY")
         client.get(PARKS_URL, object : JsonHttpResponseHandler() {
             override fun onFailure(
                 statusCode: Int,
@@ -65,6 +67,8 @@ class ParksFragment : Fragment() {
                 throwable: Throwable?
             ) {
                 Log.e(TAG, "Failed to fetch parks: $statusCode")
+                Log.e(TAG, "Response: $response")
+                Log.e(TAG, "Error: ${throwable?.message}")
             }
 
             override fun onSuccess(statusCode: Int, headers: Headers, json: JSON) {
